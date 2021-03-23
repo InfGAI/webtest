@@ -4,9 +4,13 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def index(name=None, items=None):
-    poetry = ['картина', 'корзина', 'картонка']
-    return render_template('index.html', name='qqqqqqqqqqqqqqqqqqq', items=poetry)
+def index1():
+    return render_template('index1.html')
+
+
+@app.route('/second')
+def index2():
+    return render_template('index2.html')
 
 
 app.run('127.0.0.1', 8080, debug=True)
